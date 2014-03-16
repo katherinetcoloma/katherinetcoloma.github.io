@@ -1,0 +1,52 @@
+body {
+  font: 18px/30px helvetica,sans-serif;
+  background-image: url(pattern-9awh.png);
+}
+
+
+.container {
+  width: 500px;
+  background-color: white;
+  padding: 30px;
+  margin: 30px auto;
+}
+    
+    #profile {
+      float: left;
+      border: 2px solid #ccc;
+      margin-right: 15px;
+      margin-bottom: 15px;
+}
+    
+    a {
+      color: pink;
+}
+    
+    a:hover {
+      color: red;
+    }
+    
+    a:hover #profile {
+      border-color: red;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    
+    p {
+      margin: 0.5em 0 1em 0;
+    }
+    
+    ul {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    
+    ul li {
+      list-style: none;
+      margin-top: 10px;
+      border-top: 2px solid #ccc;
+      padding-top: 10px;
+    }
