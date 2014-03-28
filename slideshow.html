@@ -26,6 +26,7 @@
             if (position > maxPosition) {
                 position = 0;
             }
+            var image = images[7];
             $('#image').fadeOut(250, function() {
                 $('#image').attr('src', 'images/' + position + '.jpg');
                 $('#image').fadeIn(250);
