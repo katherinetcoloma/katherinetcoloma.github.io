@@ -10,13 +10,35 @@
         <script src="jquery-1.11.0.js"></script>
         <script>
         var images = [
-      	  'images/1.jpg',
-      	  'images/2.jpg',
-      	  'images/3.jpg',
-      	  'images/4.jpg',
-      	  'images/5.jpg',
-      	  'images/6.jpg',
-      	  'images/7.jpg',
+      	     {
+        src: 'images/1.jpg',
+        width: 960,
+        height: 640
+    }, {
+        src: 'images/2.jpg',
+        width: 960,
+        height: 640
+    }, {
+        src: 'images/3.jpg',
+        width: 960,
+        height: 640
+    }, {
+        src: 'images/4.jpg',
+        width: 960,
+        height: 640
+    }, {
+        src: 'images/5.jpg',
+        width: 960,
+        height: 640
+    }, {
+        src: 'images/6.jpg',
+        width: 960,
+        height: 640
+    }, {
+        src: 'images/7.jpg',
+        width: 960,
+        height: 640   
+    }
     ];
         var position = 0;
         var maxPosition = images.length - 1;
@@ -30,7 +52,7 @@
             $('#image').fadeOut(250, function() {
                 $('#image').attr('src', 'images/' + position + '.jpg');
                 $('#image').fadeIn(250);
-            });
+ });
         }
         
         $('#image').click(nextImage);
