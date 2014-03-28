@@ -18,13 +18,13 @@
       	  'images/6.jpg',
       	  'images/7.jpg',
     ];
-        var position = 1;
+        var position = 0;
         var maxPosition = 7;
         
         function nextImage() {
             position++;
             if (position > maxPosition) {
-                position = 1;
+                position = 0;
             }
             $('#image').fadeOut(250, function() {
                 $('#image').attr('src', 'images/' + position + '.jpg');
