@@ -3,6 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Slideshow</title>
+        <style>
+        body {
+            margin; 0;
+        }
+        </style>
     </head>
     <body>
     <h1>Slideshows of Photos</h1>
@@ -10,7 +15,7 @@
         <script src="jquery-1.11.0.js"></script>
         <script>
         var images = [
-      	     {
+      {
         src: 'images/1.jpg',
         width: 960,
         height: 640
@@ -38,25 +43,33 @@
         src: 'images/7.jpg',
         width: 960,
         height: 640   
-    }
-    ];
-        var position = 0;
-        var maxPosition = images.length - 1;
-        
-
-         function resizeImage() {
-         var image = images[7];
-         var ratio = image.width / image.height;
-         var width = $(window).width();
-   	 var height = width / ratio;
-   	 $('#image').css('width', width);
-   	 $('#image').css('height', height);
-}
- });
         }
-        
-        $('#image').click(nextImage);
-        
-        </script>
-    </body>
-</html> 
+    ];
+         var num = 0;
+        var max = images.length - 1;
+        resizeImage();
+        $('#image').click(function() {
+            num++;
+            if (num > max) {
+                num = 0;
+    }   
+    var image = images[num];
+    this.src = image.src;
+    resizeImage();
+
+    });
+    
+    $(window).resize(resizeImage);
+
+    function resizeImage() {
+        var image = images[num];
+        var ratio = image.width / image.height;
+        var width = $(window).width();
+        var height = width / ratio;
+        $('#image').css('width', width);
+        $('#image').css('height', height);
+}
+
+         </script>
+     </body>
+</html>
