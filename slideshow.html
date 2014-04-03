@@ -45,31 +45,31 @@
         height: 640   
         }
     ];
-         var num = 0;
-        var max = images.length - 1;
-        resizeImage();
-        $('#image').click(function() {
-            num++;
-            if (num > max) {
-                num = 0;
-    }   
+var num = 0;
+var max = images.length - 1;
+resizeImage();
+$('#image').click(function() {
+    num++;
+    if (num > max) {
+        num = 0;
+    }
     var image = images[num];
     this.src = image.src;
-    resizeImage();
+resizeImage();
 
-    });
-    
-    $(window).resize(resizeImage);
+});
 
-    function resizeImage() {
-        var image = images[num];
-        var ratio = image.width / image.height;
-        var width = $(window).width();
-        var height = width / ratio;
-        $('#image').css('width', width);
-        $('#image').css('height', height);
+$(window).resize(resizeImage);
+
+function resizeImage() {
+    var image = images[num];
+    var ratio = image.width / image.height;
+    var width = $(window).width();
+    var height = width / ratio;
+    $('#image').css('width', width);
+    $('#image').css('height', height);
 }
 
-         </script>
-     </body>
-</html>
+        </script>
+    </body>
+</html>    
